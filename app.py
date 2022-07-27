@@ -16,6 +16,14 @@ def get_base64(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
+
+
+image = Image.open('image.PNG')
+# st.image(image, caption='test')
+st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+
+
+
 def set_background(png_file):
     bin_str = get_base64(png_file)
     page_bg_img = '''
@@ -37,7 +45,7 @@ set_background('sticker-arc-en-ciel.jpg')
 
 # on crée le titre
 st.title('Welcome to Diabetes Prediction') 
-st.title('using Machine Learning Algorithms') 
+st.title('using') 
 st.title('Machine Learning Algorithms') 
 
 
