@@ -33,6 +33,14 @@ set_background('sticker-arc-en-ciel.jpg')
 
 # st.plotly_chart
 
+
+
+# on crée le titre
+st.title('Welcome to Diabetes Prediction') 
+st.title('using Machine Learning Algorithms') 
+st.title('Machine Learning Algorithms') 
+
+
 txt = st.text_area('How to proceed', '''
      Welcome to our website !
      First, select a model below,
@@ -42,10 +50,6 @@ txt = st.text_area('How to proceed', '''
 # st.write('Sentiment:', run_sentiment_analysis(txt))
 
 
-# on crée le titre
-st.title('Welcome to Diabetes Prediction') 
-st.title('using Machine Learning Algorithms') 
-st.title('Machine Learning Algorithms') 
 
 nom_fichier = ["KNN","LR","RandomForest"]
 
