@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
+import time
 from streamlit_option_menu import option_menu
 
 
@@ -17,6 +18,13 @@ def get_base64(bin_file):
     return base64.b64encode(data).decode()
 
 
+
+my_bar = st.progress(80)
+for percent_complete in range(100):
+     time.sleep(0.1)
+     my_bar.progress(percent_complete + 1)
+
+    
 
 image = Image.open('image.PNG')
 # st.image(image, caption='test')
@@ -99,7 +107,6 @@ age = st.slider("Enter your age",int(data['age'].min()), int(data['age'].max()))
 
 
 
-
 # grossesses = st.number_input("Enter your grossesses")
 
 #grossesses = float(st.slider("Enter your grossesses",data['grossesses'].min(), data['grossesses'].max())
@@ -138,7 +145,7 @@ if(st.button('Predict Diabete')):
         query = query.reshape(1, 3)
         print(query)
         prediction = rf.predict(query)[0]
-        st.title("Predicted value " +
+        st.title("Predicted value is : " +
                  str(prediction) + str(nom_fichier[0]))
     
     elif(selected == nom_fichier[1]):
@@ -147,7 +154,7 @@ if(st.button('Predict Diabete')):
         query = query.reshape(1, 3)
         print(query)
         prediction = LR.predict(query)[0]
-        st.title("Predicted value " +
+        st.title("Predicted value is : " +
                  str(prediction) + str(nom_fichier[1]))
         
     elif(selected == nom_fichier[2]):
@@ -156,7 +163,7 @@ if(st.button('Predict Diabete')):
         query = query.reshape(1, 3)
         print(query)
         prediction = forest.predict(query)[0]
-        st.title("Predicted value " +
+        st.title("Predicted value is : " +
                  str(prediction) + str(nom_fichier[2]))
 
 
