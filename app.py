@@ -31,8 +31,6 @@ def set_background(png_file):
 set_background('sticker-arc-en-ciel.jpg')
 
 
-
-
 # st.plotly_chart
 
 image = Image.open('ours.png')
@@ -87,11 +85,12 @@ print(data)
   
  ### Recuperation des features :
 # age = st.number_input("Enter your age") 
-age = st.slider("Enter your age",data['age'].min(), data['age'].max())
+age = st.slider("Enter your age", 15, 120)
+# age = st.slider("Enter your age",data['age'].min(), data['age'].max())
 # grossesses = st.number_input("Enter your grossesses")
 grossesses = st.slider("Enter your grossesses",data['grossesses'].min(), data['grossesses'].max())
 # insuline= st.number_input("Enter your insuline") 
-insuline = st.slider("Enter your insuline",data['insuline'].min(), data['insuline'].max())
+insuline = st.slider("Enter your insuline (mu U / ml)",data['insuline'].min(), data['insuline'].max())
 
 
 # ##### Normalisation des features################################
