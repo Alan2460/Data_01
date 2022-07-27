@@ -33,11 +33,6 @@ set_background('sticker-arc-en-ciel.jpg')
 
 # st.plotly_chart
 
-image = Image.open('ours.png')
-# st.image(image, caption='ours')
-st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-
-
 txt = st.text_area('How to proceed', '''
      Welcome to our website !
      First, select a model below,
@@ -50,6 +45,7 @@ txt = st.text_area('How to proceed', '''
 # on crée le titre
 st.title('Welcome to Diabetes Prediction') 
 st.title('using Machine Learning Algorithms') 
+st.title('Machine Learning Algorithms') 
 
 nom_fichier = ["KNN","LR","RandomForest"]
 
@@ -152,4 +148,7 @@ if(st.button('Predict Diabete')):
                  str(prediction) + str(nom_fichier[2]))
 
 
+image = Image.open('ours.png')
+# st.image(image, caption='ours')
+st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
