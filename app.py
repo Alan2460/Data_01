@@ -85,13 +85,27 @@ print(data)
   
  ### Recuperation des features :
 # age = st.number_input("Enter your age") 
-age = st.slider("Enter your age", 15, 120)
+#age = st.slider("Enter your age", 1, 120)
 # age = st.slider("Enter your age",data['age'].min(), data['age'].max())
-# grossesses = st.number_input("Enter your grossesses")
-grossesses = st.slider("Enter your grossesses",data['grossesses'].min(), data['grossesses'].max())
-# insuline= st.number_input("Enter your insuline") 
-insuline = st.slider("Enter your insuline (mu U / ml)",data['insuline'].min(), data['insuline'].max())
+age = st.slider("Enter your age",int(data['age'].min()), int(data['age'].max()))
 
+
+
+
+# grossesses = st.number_input("Enter your grossesses")
+
+#grossesses = float(st.slider("Enter your grossesses",data['grossesses'].min(), data['grossesses'].max())
+#grossesses = st.slider("Enter your grossesses",0, 25)
+grossesses = float(st.slider("Enter your grossesses", int(data['grossesses'].min()), int(data['grossesses'].max()))
+
+
+
+# insuline= st.number_input("Enter your insuline") 
+# insuline = st.slider("Enter your insuline (mu U / ml)",data['insuline'].min(), data['insuline'].max())
+insuline = st.slider("Enter your insuline (mu U / ml)",int(data['insuline'].min()), int(data['insuline'].max()))
+    
+
+#insuline = st.slider("Enter your insuline (mu U / ml)",0, 780)
 
 # ##### Normalisation des features################################
 moy_age=data['age'].mean()
