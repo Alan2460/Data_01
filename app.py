@@ -96,7 +96,7 @@ age = st.slider("Enter your age",int(data['age'].min()), int(data['age'].max()))
 
 #grossesses = float(st.slider("Enter your grossesses",data['grossesses'].min(), data['grossesses'].max())
 #grossesses = st.slider("Enter your grossesses",0, 25)
-grossesses = st.slider("Enter your grossesses", int(data['grossesses'].min()), int(data['grossesses'].max())
+grossesses = st.slider("Enter your grossesses", int(data['grossesses'].min()), int(data['grossesses'].max()))
 
 
 # insuline= st.number_input("Enter your insuline") 
